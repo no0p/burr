@@ -1,0 +1,3 @@
+This is some octave code for solving a 6 piece burr puzzle.
+
+It generates a finite space of cuboids, and attempts all permutations of block definitions.  
