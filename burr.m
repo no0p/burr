@@ -32,13 +32,17 @@ for i = 1:length(blocks)
                       for t = 1:4
                         phi = shift(blocks{s, 2}', t)';
                         
-                        space = block_space(4)
+                        space = block_space(4);
                         space = place_alpha(space, alpha);
                         space = place_beta(space, beta);
                         space = place_gamma(space, gamma);
                         space = place_delta(space, delta);
                         space = place_epsilon(space, epsilon);
                         space = place_phi(space, phi);
+                        
+                        confs += 1;
+                        fprintf("%d", confs);
+       
                         
                         if evaluate_space(space) == 1
                           fprintf("found match ... ");
