@@ -41,13 +41,13 @@ for i = 1:length(blocks)
                         space = place_phi(space, phi);
                         
                         confs += 1;
-                        fprintf("%d", confs);
+                        fprintf("%d\n", confs);
        
                         
                         if evaluate_space(space) == 1
                           fprintf("found match ... ");
                         end
-                        
+                        fflush(stdout);
                       endfor
                     endfor
                   endfor
