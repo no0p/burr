@@ -4,7 +4,7 @@ load blocks.m;
 fprintf("creating blank space...\n");
 
 
-positions = {"alpha", "beta", "gamma", "delta", "epsilon", "phi"}
+positions = {"alpha", "beta", "gamma", "delta", "epsilon", "phi"};
 
 confs = 0; % Track total configurations
 
@@ -40,7 +40,10 @@ for i = 1:length(blocks)
                         space = place_epsilon(space, epsilon);
                         space = place_phi(space, phi);
                         
-                        evaluate_space(space);
+                        if evaluate_space(space) == 1
+                          fprintf("found match ... ");
+                        end
+                        
                       endfor
                     endfor
                   endfor
