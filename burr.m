@@ -51,15 +51,17 @@ function burr(first_block = 1)
                                                 space = place_phi(space, phi);
                                                 
                                                 confs += 1;
-                                                fprintf("%d\n", confs);
-                               
+                                                if mod(confs, 1000) == 0
+                                                  fprintf("%d:%d:%d:%d:%d:%d\n", i, k, m, o, q, s);
+                                                  fflush(stdout);
+                                                end
                                                 
                                                 if evaluate_space(space) == 1
-                                                  fprintf("found match ... ");
+                                                  fprintf(" *********** found match ************ ");
                                                   fprintf("i: %d\nj: %d\n k: %d\n l: %d\n m: %d\n n: %d\n o: %d\n p: %d\n q: %d\n r: %d\n s: %d\n t: %d\n", i, j, k, l, m, n, o, p, q, r, s, t);
                                                   error
                                                 end
-                                                fflush(stdout);
+                                                
                                               endfor
                                             endfor
                                           endif
