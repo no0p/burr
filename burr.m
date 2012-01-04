@@ -1,4 +1,4 @@
-function burr(first_block = 1)
+function burr(first_block = 1, explode = 0)
   fprintf("loading blocks\n");
   load blocks.m;
 
@@ -71,6 +71,9 @@ function burr(first_block = 1)
                                                   fprintf("alpha: %d  rotate: %d  flip: %d\n beta: %d rotate: %d flip: %d\n gamma: %d rotate: %d flip: %d\n delta: %d rotate: %d flip: %d\n epsilon: %d rotate: %d flip: %d\n phi: %d rotate: %d flip: %d\n\n", i, j, z, k, l, y, m, n, x, o, p, w, q, r, v, s, t, u);
                                                   
                                                   fflush(stdout);
+                                                  if explode == 1
+                                                    error
+                                                  end
 
                                                 end
                                                 
